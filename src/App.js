@@ -20,6 +20,11 @@ function App() {
     setSubimitJSON(true);
   };
 
+  const handleClearJSON = () => {
+    setSubimitJSON(false);
+    setInputJSON(null);
+  };
+
   return (
     <div>
       <h1>Rinha de Frontend</h1>
@@ -31,6 +36,7 @@ function App() {
           placeholder="Insira o JSON aqui"
         />
         <button onClick={handleJSONSubmit}>Enviar</button>
+        <button onClick={handleClearJSON}>Limpar</button>
       </section>
 
       {
