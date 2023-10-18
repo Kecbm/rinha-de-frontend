@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import ReactJson from 'react-json-view'
 
 function App() {
   const [inputJSON, setInputJSON] = useState(null);
+  const [inputFileName, setInputFileName] = useState('');
   const [submitJSON, setSubimitJSON] = useState(false);
 
   const handleFileChange = (e) => {
@@ -9,8 +11,13 @@ function App() {
     if (file) {
       const reader = new FileReader();
       reader.onload = (event) => {
-        const jsonContent = event.target.result;
-        setInputJSON(jsonContent);
+        try {
+          const jsonContent = JSON.parse(event.target.result); // Parse a JSON string to an object
+          setInputJSON(jsonContent);
+          setInputFileName(file.name);
+        } catch (error) {
+          console.error('Erro ao fazer parse do JSON:', error);
+        }
       };
       reader.readAsText(file);
     }
@@ -23,6 +30,8 @@ function App() {
   const handleClearJSON = () => {
     setSubimitJSON(false);
     setInputJSON(null);
+
+    document.getElementById("fileInput").value = ''; 
   };
 
   return (
@@ -31,6 +40,7 @@ function App() {
 
       <section>
         <input
+          id="fileInput"
           type="file"
           onChange={handleFileChange}
           placeholder="Insira o JSON aqui"
@@ -42,7 +52,12 @@ function App() {
       {
         submitJSON && inputJSON ? (
           <section>
-            <pre>{JSON.stringify(JSON.parse(inputJSON), null, 2)}</pre>
+            <ReactJson
+              src={inputJSON}
+              name={inputFileName}
+              indentWidth="2"
+              collapsed="true"
+            />
           </section>
         ) : null
       }
