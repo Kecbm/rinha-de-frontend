@@ -35,7 +35,7 @@ const translations = {
       language: 'Selecciona el idioma',
       selectLanguage: 'Idiomas disponibles en la aplicación',
       errorSendJSON: 'Error al analizar JSON: ',
-      titlePage: 'Lucha Frontal',
+      titlePage: 'Rinha de Frontend',
       inputLabel: 'Seleccione un archivo JSON:',
       inputPlaceholder: 'Inserte el archivo JSON aquí',
       inputAriaDescribedBy: 'Campo destinado a cargar un archivo JSON',
