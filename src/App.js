@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import ReactJson from 'react-json-view'
 import translations from './locales/translations';
+import './styles/App.css';
 
 function App() {
   const [inputJSON, setInputJSON] = useState(null);
   const [inputFileName, setInputFileName] = useState('');
   const [submitJSON, setSubimitJSON] = useState(false);
-  const [languageOptionsVisible, setLanguageOptionsVisible] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('pt');
 
   const handleFileChange = (e) => {
@@ -34,46 +34,56 @@ function App() {
     setSubimitJSON(false);
     setInputJSON(null);
 
-    document.getElementById("fileInput").value = ''; 
+    document.getElementById("input-file").value = ''; 
   };
 
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
-    setLanguageOptionsVisible(false);
   };
 
-  const toggleLanguageOptions = () => {
-    setLanguageOptionsVisible((prevVisible) => !prevVisible);
-  };
+  // const toggleLanguageOptions = () => {
+  //   setLanguageOptionsVisible((prevVisible) => !prevVisible);
+  // };
+
+  const languageOptions = [
+    { value: 'en', label: '🇺🇸 English' },
+    { value: 'pt', label: '🇧🇷 Português' },
+    { value: 'la', label: '🇪🇸 Espanhol' },
+    // Adicione mais opções conforme necessário.
+  ];
 
   return (
-    <div>
-      <h1>{translations[selectedLanguage].titlePage}</h1>
+    <div id="home-page">
+      <h1 id="home-title">{translations[selectedLanguage].titlePage}</h1>
 
-      {/* Botão principal de seleção de idioma */}
-      <button onClick={toggleLanguageOptions} aria-label={translations[selectedLanguage].selectLanguage}>{translations[selectedLanguage].language}</button>
-
-      {/* Opções de idioma (exibidas se `languageOptionsVisible` for verdadeiro) */}
-      {languageOptionsVisible && (
-        <div className="language-options">
-          <button onClick={() => handleLanguageChange('en')}>English</button>
-          <button onClick={() => handleLanguageChange('pt')}>Português</button>
-          <button onClick={() => handleLanguageChange('la')}>Espanhol</button>
-          {/* Adicione mais botões para outros idiomas conforme necessário. */}
-        </div>
-      )}
+      <select
+        value={selectedLanguage}
+        onChange={(e) => handleLanguageChange(e.target.value)}
+        aria-label={translations[selectedLanguage].selectLanguage}
+      >
+        {languageOptions.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
 
       <section>
-        <label htmlFor="fileInput">{translations[selectedLanguage].inputLabel}</label>
+        <label htmlFor="input-file" id="input-label">{translations[selectedLanguage].inputLabel}</label>
+
+        {/* OBS: O input não está puxando a tradução nem a estilização :( */}
+        {translations[selectedLanguage].inputAriaDescribedBy}
         <input
-          id="fileInput"
+          id="input-file"
           type="file"
           onChange={handleFileChange}
-          placeholder={translations[selectedLanguage].inputPlaceholder}
+          // placeholder={translations[selectedLanguage].inputPlaceholder}
           aria-describedby={translations[selectedLanguage].inputAriaDescribedBy}
           accept=".json"
         />
+
         <button onClick={handleJSONSubmit} aria-label={translations[selectedLanguage].secondButtonAriaLabel}>{translations[selectedLanguage].sendButton}</button>
+
         <button onClick={handleClearJSON} aria-label={translations[selectedLanguage].clearButtonAriaLabel}>{translations[selectedLanguage].clearButton}</button>
       </section>
                                
