@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&family=Roboto:wght@500&display=swap');
 
+/* cores:
+#efefef
+#d9d9d9
+#c3c3c3 */
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: #d9d9d9;
 }
 
 #home-page {
@@ -10,7 +19,6 @@
   max-height: fit-content;
   max-width: 100%;
   padding: 80px;
-  /* text-align: center; */
 }
 
 #home-title {
@@ -23,10 +31,11 @@ select {
   font-weight: 700;
   font-size: 18px;
   /* Adicione seu estilo de fundo e cor de texto personalizados */
-  background-color: #f8f8f8;
+  background-color: #efefef;
 
   /* Defina uma altura e largura adequadas */
-  width: 50%;
+  width: 9%;
+  min-width: fit-content;
   padding: 12px 20px;
 
   /* Adicione bordas para uma aparência mais nítida */
@@ -41,12 +50,13 @@ select {
 
 /* Estilo quando o usuário passa o mouse sobre o select */
 select:hover {
-  border-color: #0074d9; /* Cor destacada no hover */
+  border-color: #d9d9d9; /* Cor destacada no hover */
 }
 
 /* Estilo quando o select está ativo ou em foco */
 select:focus {
-  border-color: #004c9e; /* Cor destacada quando em foco */
+  border-color: #d9d9d9; /* Cor destacada quando em foco */
+  outline: 3px solid #000000;
 }
 
 /* Estilo para opções no dropdown do select */
@@ -55,31 +65,52 @@ select option {
   font-family: 'Nunito';
   font-weight: 700;
   font-size: 18px;
-  background-color: #f8f8f8; /* Cor de fundo das opções */
+  background-color: #efefef; /* Cor de fundo das opções */
 }
 
 /* Estilo para opções quando o usuário passa o mouse sobre elas */
 select option:hover {
-  background-color: #0074d9; /* Cor destacada no hover */
-  color: #fff; /* Cor do texto no hover */
+  background-color: #d9d9d9; /* Cor destacada no hover */
 }
 
-#input-label {
+#input-title {
   font-family: 'Nunito';
   font-weight: 500;
   font-size: 20px;
 }
 
-#input-file {
-  display: none; /* Oculta o elemento real do input file. */
+.input-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
 }
 
-/* OBS: O input não está puxando a tradução nem a estilização :( */
-/* #input-file:placeholder {
+#input-label {
   font-family: 'Nunito';
   font-weight: 700;
-  font-size: 18px;
-} */
+  font-size: 20px;
+  padding: 12px 20px;
+  /* text-align: center; */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #efefef;
+  transition: background-color 0.3s, color 0.3s;
+  width: 40%;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#input-label:hover {
+  background-color: #d9d9d9;
+  outline: 3px solid #000000;
+}
+
+#input-file {
+  display: none;
+}
 
 button {
   font-family: 'Nunito';
@@ -91,18 +122,20 @@ button {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 5px 5px 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 219px;
 }
 
 button.default {
-  background-color: #0074d9; /* Cor de fundo do botão */
-  color: #fff;
+  background-color: #efefef;
 }
 
 button:hover {
-  background-color: #0056b3; /* Cor de fundo mais escura */
-  color: #fff;
+  background-color: #d9d9d9;
+  outline: 3px solid #000000;
 }
 
 footer {

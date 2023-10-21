@@ -41,10 +41,6 @@ function App() {
     setSelectedLanguage(language);
   };
 
-  // const toggleLanguageOptions = () => {
-  //   setLanguageOptionsVisible((prevVisible) => !prevVisible);
-  // };
-
   const languageOptions = [
     { value: 'en', label: '🇺🇸 English' },
     { value: 'pt', label: '🇧🇷 Português' },
@@ -56,6 +52,7 @@ function App() {
     <div id="home-page">
       <h1 id="home-title">{translations[selectedLanguage].titlePage}</h1>
 
+      {/* https://moderncss.dev/custom-select-styles-with-pure-css/ */}
       <select
         value={selectedLanguage}
         onChange={(e) => handleLanguageChange(e.target.value)}
@@ -69,22 +66,25 @@ function App() {
       </select>
 
       <section>
-        <label htmlFor="input-file" id="input-label">{translations[selectedLanguage].inputLabel}</label>
+        <p id="input-title">{translations[selectedLanguage].inputLabel}</p>
 
-        {/* OBS: O input não está puxando a tradução nem a estilização :( */}
-        {translations[selectedLanguage].inputAriaDescribedBy}
+        <label htmlFor="input-file" id="input-label" aria-describedby={translations[selectedLanguage].inputAriaDescribedBy}>
+          <img src="https://img.icons8.com/ios-filled/50/opened-folder.png" alt="opened-folder" className="input-icon" />
+          {translations[selectedLanguage].inputPlaceholder}
+        </label>
+
         <input
           id="input-file"
           type="file"
           onChange={handleFileChange}
-          // placeholder={translations[selectedLanguage].inputPlaceholder}
-          aria-describedby={translations[selectedLanguage].inputAriaDescribedBy}
           accept=".json"
+          onClick={handleJSONSubmit}
         />
 
-        <button onClick={handleJSONSubmit} aria-label={translations[selectedLanguage].secondButtonAriaLabel}>{translations[selectedLanguage].sendButton}</button>
-
-        <button onClick={handleClearJSON} aria-label={translations[selectedLanguage].clearButtonAriaLabel}>{translations[selectedLanguage].clearButton}</button>
+        <button onClick={handleClearJSON} aria-label={translations[selectedLanguage].clearButtonAriaLabel}>
+          <img src="https://img.icons8.com/ios-filled/50/delete--v1.png" alt="delete--v1" className="input-icon"/>
+          {translations[selectedLanguage].clearButton}
+        </button>
       </section>
                                
       {
