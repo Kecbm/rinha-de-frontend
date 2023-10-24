@@ -50,9 +50,8 @@ function App() {
 
   return (
     <div id="home-page">
-      <h1 id="home-title">{translations[selectedLanguage].titlePage}</h1>
-
       {/* https://moderncss.dev/custom-select-styles-with-pure-css/ */}
+      {/* https://www.youtube.com/watch?v=kcw9hxYb53Q */}
       <select
         value={selectedLanguage}
         onChange={(e) => handleLanguageChange(e.target.value)}
@@ -65,7 +64,11 @@ function App() {
         ))}
       </select>
 
-      <section>
+      <h1 id="home-title">{translations[selectedLanguage].titlePage}</h1>
+
+      <p id="description">{translations[selectedLanguage].description}</p>
+
+      <section id="input-content">
         <p id="input-title">{translations[selectedLanguage].inputLabel}</p>
 
         <label htmlFor="input-file" id="input-label" aria-describedby={translations[selectedLanguage].inputAriaDescribedBy}>
@@ -80,16 +83,16 @@ function App() {
           accept=".json"
           onClick={handleJSONSubmit}
         />
-
-        <button onClick={handleClearJSON} aria-label={translations[selectedLanguage].clearButtonAriaLabel}>
-          <img src="https://img.icons8.com/ios-filled/50/delete--v1.png" alt="delete--v1" className="input-icon"/>
-          {translations[selectedLanguage].clearButton}
-        </button>
       </section>
+        
+      <button onClick={handleClearJSON} aria-label={translations[selectedLanguage].clearButtonAriaLabel}>
+        <img src="https://img.icons8.com/ios-filled/50/delete--v1.png" alt="delete--v1" className="input-icon"/>
+        {translations[selectedLanguage].clearButton}
+      </button>
                                
       {
         submitJSON && inputJSON ? (
-          <section>
+          <section id="json-content">
             <ReactJson
               src={inputJSON}
               name={inputFileName}
@@ -99,11 +102,15 @@ function App() {
               aria-labelledby={translations[selectedLanguage].reactJsonAriaLabellEdby}
             />
           </section>
-        ) : null
+        ) : (
+          <section id="json-content">
+            <p>{translations[selectedLanguage].contentJson}</p>
+          </section>
+        )
       }
 
       <footer>
-        <p>✨ {translations[selectedLanguage].frontend} ✨</p>
+        <p>{translations[selectedLanguage].frontend}</p>
       </footer>
     </div>
   );
