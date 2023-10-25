@@ -8,6 +8,7 @@ function App() {
   const [inputFileName, setInputFileName] = useState('');
   const [submitJSON, setSubimitJSON] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('pt');
+  const [invalidJson, setInvalidJson] = useState(null);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -19,7 +20,7 @@ function App() {
           setInputJSON(jsonContent);
           setInputFileName(file.name);
         } catch (error) {
-          console.error('Erro ao fazer parse do JSON:', error);
+          setInvalidJson(translations[selectedLanguage].invalidContentJson);
         }
       };
       reader.readAsText(file);
@@ -33,6 +34,7 @@ function App() {
   const handleClearJSON = () => {
     setSubimitJSON(false);
     setInputJSON(null);
+    setInvalidJson(null);
 
     document.getElementById("input-file").value = ''; 
   };
@@ -58,7 +60,7 @@ function App() {
         aria-label={translations[selectedLanguage].selectLanguage}
       >
         {languageOptions.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option key={option.value} value={option.value} className="language-option">
             {option.label}
           </option>
         ))}
@@ -104,13 +106,19 @@ function App() {
           </section>
         ) : (
           <section id="json-content">
-            <p>{translations[selectedLanguage].contentJson}</p>
+            {
+              invalidJson ? <p id="invalid-json">{invalidJson}</p> : <p>{translations[selectedLanguage].contentJson}</p>
+            }
           </section>
         )
       }
 
       <footer>
-        <p>{translations[selectedLanguage].frontend}</p>
+        <img className="input-icon" src="https://img.icons8.com/arcade/64/sparkling.png" alt="sparkling"/>
+        <p>
+          {translations[selectedLanguage].frontend}
+        </p>
+        <img className="input-icon" src="https://img.icons8.com/arcade/64/sparkling.png" alt="sparkling"/>
       </footer>
     </div>
   );

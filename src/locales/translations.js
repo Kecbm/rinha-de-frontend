@@ -13,6 +13,7 @@ const translations = {
       reactJsonAriaLabel: 'Conteúdo JSON do arquivo',
       reactJsonAriaLabellEdby: 'Componente que renderiza na tela o conteúdo do arquivo JSON enviado',
       contentJson: 'Conteúdo do arquivo JSON',
+      invalidContentJson: 'Erro ao analisar o arquivo JSON. Certifique-se de que é um arquivo válido.',
       frontend: 'Frontend é minha paixão',
     },
     en: {
@@ -29,6 +30,7 @@ const translations = {
       reactJsonAriaLabel: 'JSON content of the file',
       reactJsonAriaLabellEdby: 'Component that renders the content of the sent JSON file on the screen',
       contentJson: 'JSON file content',
+      invalidContentJson: 'Error parsing JSON file. Make sure it is a valid file.',
       frontend: 'Frontend is my passion',
     },
     la: {
@@ -45,6 +47,7 @@ const translations = {
       reactJsonAriaLabel: 'Contenido JSON del archivo',
       reactJsonAriaLabellEdby: 'Componente que representa el contenido del archivo JSON enviado en la pantalla',
       contentJson: 'Contenido del archivo JSON',
+      invalidContentJson: 'Error al analizar el archivo JSON. Asegúrese de que sea un archivo válido.',
       frontend: 'Frontend es mi pasión',
     },
     // Adicione mais idiomas e traduções conforme necessário.
