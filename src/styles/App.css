@@ -25,23 +25,17 @@ select {
   font-family: 'Nunito';
   font-weight: 700;
   font-size: 18px;
-  /* Adicione seu estilo de fundo e cor de texto personalizados */
   background-color: #efefef;
-
-  /* Defina uma altura e largura adequadas */
   width: 9%;
   min-width: fit-content;
   padding: 12px 20px;
-
-  /* Adicione bordas para uma aparência mais nítida */
   border: none;
   border-radius: 4px;
-
-  /* Remova a aparência padrão das setas nos navegadores */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   float: right;
+  cursor: pointer;
 }
 
 select:hover {
@@ -175,7 +169,6 @@ button:hover {
   font-weight: 700;
   font-size: 18px;
   color: #d70000;
-  /* color: #BF0E0E; */
 }
 
 footer {
