@@ -9,16 +9,24 @@ function App() {
   const [submitJSON, setSubimitJSON] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('pt');
   const [invalidJson, setInvalidJson] = useState(null);
+  const [buttonId, setButtonId] = useState('btn-clear');
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
+      const startTime = performance.now();
+
       reader.onload = (event) => {
         try {
           const jsonContent = JSON.parse(event.target.result);
           setInputJSON(jsonContent);
           setInputFileName(file.name);
+
+          const endTime = performance.now();
+          const timeTaken = endTime - startTime;
+
+          console.log(`Tempo de processamento do arquivo: ${timeTaken} ms`);
         } catch (error) {
           setInvalidJson(translations[selectedLanguage].invalidContentJson);
         }
@@ -35,6 +43,11 @@ function App() {
     setSubimitJSON(false);
     setInputJSON(null);
     setInvalidJson(null);
+    setButtonId('btn-active');
+
+    setTimeout(() => {
+      setButtonId('btn-clear');
+    }, 2000);
 
     document.getElementById("input-file").value = ''; 
   };
@@ -52,8 +65,7 @@ function App() {
 
   return (
     <div id="home-page">
-      {/* https://moderncss.dev/custom-select-styles-with-pure-css/ */}
-      {/* https://www.youtube.com/watch?v=kcw9hxYb53Q */}
+      {/* https://www.youtube.com/watch?v=uFIl4BvYne0 */}
       <select
         value={selectedLanguage}
         onChange={(e) => handleLanguageChange(e.target.value)}
@@ -87,7 +99,13 @@ function App() {
         />
       </section>
         
-      <button onClick={handleClearJSON} aria-label={translations[selectedLanguage].clearButtonAriaLabel}>
+      <button
+        onClick={handleClearJSON}
+        aria-label={translations[selectedLanguage].clearButtonAriaLabel}
+        id={buttonId}
+        disabled={!inputJSON}
+      >
+        {/* <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/818181/delete--v1.png" alt="delete--v1"/> */}
         <img src="https://img.icons8.com/ios-filled/50/delete--v1.png" alt="delete--v1" className="input-icon"/>
         {translations[selectedLanguage].clearButton}
       </button>
@@ -102,6 +120,10 @@ function App() {
               collapsed="true"
               aria-label={`${translations[selectedLanguage].reactJsonAriaLabel} ${inputFileName}`}
               aria-labelledby={translations[selectedLanguage].reactJsonAriaLabellEdby}
+              enableClipboard={false}
+              displayObjectSize={false}
+              displayDataTypes={false}
+              displayArrayKey={false}
             />
           </section>
         ) : (
