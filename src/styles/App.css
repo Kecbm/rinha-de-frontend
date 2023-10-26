@@ -135,9 +135,6 @@ select option:hover {
   align-items: center;
   justify-content: center;
   width: 230px;
-}
-
-#btn-clear.default {
   background-color: #efefef;
 }
 
@@ -148,6 +145,11 @@ select option:hover {
 
 #btn-clear:disabled {
   color: #818181;
+  cursor: not-allowed;
+}
+
+#btn-clear:disabled:hover {
+  outline: 3px solid #818181;
 }
 
 #btn-active {

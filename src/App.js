@@ -10,6 +10,8 @@ function App() {
   const [selectedLanguage, setSelectedLanguage] = useState('pt');
   const [invalidJson, setInvalidJson] = useState(null);
   const [buttonId, setButtonId] = useState('btn-clear');
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [buttonIconColor, setButtonIconColor] = useState('818181');
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -22,6 +24,8 @@ function App() {
           const jsonContent = JSON.parse(event.target.result);
           setInputJSON(jsonContent);
           setInputFileName(file.name);
+          setIsButtonDisabled(false);
+          setButtonIconColor('000000');
 
           const endTime = performance.now();
           const timeTaken = endTime - startTime;
@@ -29,6 +33,8 @@ function App() {
           console.log(`Tempo de processamento do arquivo: ${timeTaken} ms`);
         } catch (error) {
           setInvalidJson(translations[selectedLanguage].invalidContentJson);
+          setIsButtonDisabled(false);
+          setButtonIconColor('000000');
         }
       };
       reader.readAsText(file);
@@ -47,6 +53,8 @@ function App() {
 
     setTimeout(() => {
       setButtonId('btn-clear');
+      setIsButtonDisabled(true);
+      setButtonIconColor('818181');
     }, 2000);
 
     document.getElementById("input-file").value = ''; 
@@ -103,10 +111,10 @@ function App() {
         onClick={handleClearJSON}
         aria-label={translations[selectedLanguage].clearButtonAriaLabel}
         id={buttonId}
-        disabled={!inputJSON}
+        disabled={isButtonDisabled}
       >
         {/* <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/818181/delete--v1.png" alt="delete--v1"/> */}
-        <img src="https://img.icons8.com/ios-filled/50/delete--v1.png" alt="delete--v1" className="input-icon"/>
+        <img src={`https://img.icons8.com/ios-filled/50/${buttonIconColor}/delete--v1.png`} alt="delete--v1" className="input-icon"/>
         {translations[selectedLanguage].clearButton}
       </button>
                                
