@@ -80,7 +80,7 @@ function App() {
         aria-label={translations[selectedLanguage].selectLanguage}
       >
         {languageOptions.map((option) => (
-          <option key={option.value} value={option.value} className="language-option">
+          <option key={option.value} value={option.value}>
             {option.label}
           </option>
         ))}
