@@ -12,10 +12,12 @@ function App() {
   const [buttonId, setButtonId] = useState('btn-clear');
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [buttonIconColor, setButtonIconColor] = useState('818181');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      setIsLoading(true);
       const reader = new FileReader();
       const startTime = performance.now();
 
@@ -23,6 +25,7 @@ function App() {
         try {
           const jsonContent = JSON.parse(event.target.result);
           setInputJSON(jsonContent);
+          setIsLoading(false);
           setInputFileName(file.name);
           setIsButtonDisabled(false);
           setButtonIconColor('000000');
@@ -32,6 +35,7 @@ function App() {
 
           console.log(`Tempo de processamento do arquivo: ${timeTaken} ms`);
         } catch (error) {
+          setIsLoading(false);
           setInvalidJson(translations[selectedLanguage].invalidContentJson);
           setIsButtonDisabled(false);
           setButtonIconColor('000000');
@@ -65,36 +69,81 @@ function App() {
   };
 
   const languageOptions = [
+    { value: 'ar', label: '🇸🇦 Árabe' },
+    // { value: 'bn', label: '🇧🇩 Bengali' },
+    { value: 'zh', label: '🇨🇳 Chinês' },
     { value: 'en', label: '🇺🇸 English' },
-    { value: 'pt', label: '🇧🇷 Português' },
     { value: 'la', label: '🇪🇸 Espanhol' },
-    // Adicione mais opções conforme necessário.
+    { value: 'hi', label: '🇮🇳 Hindi' },
+    { value: 'ja', label: '🇯🇵 Japonês' },
+    { value: 'pa', label: '🇵🇰 Punjabi' },
+    { value: 'pt', label: '🇧🇷 Português' },
+    { value: 'ru', label: '🇷🇺 Russo' },
   ];
 
   return (
-    <div id="home-page">
+    <div
+      id="home-page"
+      aria-label={translations[selectedLanguage].pageLabel}
+    >
       {/* https://www.youtube.com/watch?v=uFIl4BvYne0 */}
       <select
         value={selectedLanguage}
         onChange={(e) => handleLanguageChange(e.target.value)}
         aria-label={translations[selectedLanguage].selectLanguage}
+        tabindex="1"
       >
         {languageOptions.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option
+            key={option.value}
+            value={option.value}
+            aria-label={`${translations[selectedLanguage].selectOptionLabel} ${option.label}`}
+          >
             {option.label}
           </option>
         ))}
       </select>
 
-      <h1 id="home-title">{translations[selectedLanguage].titlePage}</h1>
+      <h1
+        id="home-title"
+        aria-labelledby={translations[selectedLanguage].titleLabel}
+        tabindex="2"
+      >
+        {translations[selectedLanguage].titlePage}
+      </h1>
 
-      <p id="description">{translations[selectedLanguage].description}</p>
+      <p
+        id="description"
+        aria-labelledby={translations[selectedLanguage].descriptionPage}
+        tabindex="3"
+      >
+        {translations[selectedLanguage].description}
+      </p>
 
-      <section id="input-content">
-        <p id="input-title">{translations[selectedLanguage].inputLabel}</p>
+      <section
+        id="input-content"
+        aria-labelledby={translations[selectedLanguage].sectionSendJson}
+      >
+        <p 
+          id="input-title"
+          aria-labelledby={translations[selectedLanguage].sendJsonTitle}
+          tabindex="4"
+        >
+          {translations[selectedLanguage].sendJsonText}
+        </p>
 
-        <label htmlFor="input-file" id="input-label" aria-describedby={translations[selectedLanguage].inputAriaDescribedBy}>
-          <img src="https://img.icons8.com/ios-filled/50/opened-folder.png" alt="opened-folder" className="input-icon" />
+        <label
+          htmlFor="input-file"
+          id="input-label"
+          aria-label={translations[selectedLanguage].inputLabel}
+          aria-describedby={translations[selectedLanguage].inputAriaDescribedBy}
+          tabindex="5"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/50/opened-folder.png"
+            alt={translations[selectedLanguage].iconFolder}
+            className="input-icon"
+          />
           {translations[selectedLanguage].inputPlaceholder}
         </label>
 
@@ -112,43 +161,64 @@ function App() {
         aria-label={translations[selectedLanguage].clearButtonAriaLabel}
         id={buttonId}
         disabled={isButtonDisabled}
+        tabindex="6"
       >
-        {/* <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/818181/delete--v1.png" alt="delete--v1"/> */}
-        <img src={`https://img.icons8.com/ios-filled/50/${buttonIconColor}/delete--v1.png`} alt="delete--v1" className="input-icon"/>
+        <img
+          src={`https://img.icons8.com/ios-filled/50/${buttonIconColor}/delete--v1.png`}
+          alt={translations[selectedLanguage].iconClear}
+          className="input-icon"
+        />
         {translations[selectedLanguage].clearButton}
       </button>
                                
       {
         submitJSON && inputJSON ? (
-          <section id="json-content">
+          <section
+            id="json-content"
+            aria-labelledby={translations[selectedLanguage].sectionShowJson}
+          >
             <ReactJson
               src={inputJSON}
               name={inputFileName}
               indentWidth="2"
               collapsed="true"
               aria-label={`${translations[selectedLanguage].reactJsonAriaLabel} ${inputFileName}`}
-              aria-labelledby={translations[selectedLanguage].reactJsonAriaLabellEdby}
+              aria-describedby={translations[selectedLanguage].reactJsonAriaDescribedBy}
               enableClipboard={false}
               displayObjectSize={false}
               displayDataTypes={false}
               displayArrayKey={false}
+              tabindex="7"
             />
           </section>
         ) : (
-          <section id="json-content">
+          <section
+            id="json-content"
+            aria-labelledby={translations[selectedLanguage].sectionShowJson}
+          >
             {
-              invalidJson ? <p id="invalid-json">{invalidJson}</p> : <p>{translations[selectedLanguage].contentJson}</p>
+              invalidJson
+              ? <p id="invalid-json" aria-labelledby={translations[selectedLanguage].invalidContentJsonAria} tabindex="8">
+                  {invalidJson}
+                </p>
+              : <p aria-labelledby={translations[selectedLanguage].sectionShowJson} tabindex="9">
+                  {isLoading ? (<div class="lds-spinner" aria-labelledby={translations[selectedLanguage].sectionSendJson} tabindex="10"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>) : (translations[selectedLanguage].contentJson)}
+                </p>
             }
           </section>
         )
       }
 
-      <footer>
-        <img className="input-icon" src="https://img.icons8.com/arcade/64/sparkling.png" alt="sparkling"/>
-        <p>
-          {translations[selectedLanguage].frontend}
+      <footer
+        aria-labelledby={translations[selectedLanguage].footer}
+        tabindex="11"
+      >
+        <p
+          aria-labelledby={translations[selectedLanguage].devAria}
+          tabindex="12"
+        >
+          {translations[selectedLanguage].devText} <a href="https://github.com/Kecbm" target="_blank"  rel="noreferrer">Klecianny Melo</a>
         </p>
-        <img className="input-icon" src="https://img.icons8.com/arcade/64/sparkling.png" alt="sparkling"/>
       </footer>
     </div>
   );
