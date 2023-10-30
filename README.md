@@ -20,9 +20,9 @@ Um **Visualizador de JSON** utilizando `React`, `CSS` e `JavaScript`.
 <br>
 
 <details><summary>Desenvolvimento 🎯</summary>
-<p>
+
 Desenvolvi a aplicação utilizando a biblioteca [React JSON View](https://www.npmjs.com/package/react-json-view) para visualizar o JSON na tela. Um dos grandes desafios da Rinha de Frontend foi implementar recursos para torna a aplicação acessível e a otimização para que o arquivo fosse renderizado no menor tempo possível.
-</p>
+
 </details>
 
 <details><summary>Acessibilidade ♿️</summary>
