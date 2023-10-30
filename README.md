@@ -1,96 +1,149 @@
-# Rinha de Frontend
+<h1 id="top" align="center">Boas vindas ao repositório do Visualizador de JSON 📄</h1>
 
-Este é o repositório da Rinha de Frontend. Esta é uma brincadeira e um desafio de código inspirada pela _"Rinha de Backend"_, uma iniciativa criada por Francisco Franceschi.
+<h2>Sumário:</h2>
 
-O desafio consiste em montar um sistema Frontend com a stack que você quiser, e estressá-lo de acordo com as especificações abaixo, simplesmente pra ver o que acontece. Quem tirar a melhor performance nos critérios aqui estabelecidos, vence.
+- [O que foi desenvolvido](#summary)
+- [Tecnologias utilizadas](#tech)
+- [Executar o projeto](#execute)
+- [Minhas considerações durante o desenvolvimento](#considerations)
 
-## O Desafio
+<h3>👉 Clique nos tópicos com seta a direita para expandir o conteúdo</h3>
 
-Criar uma **"JSON Tree Viewer"**: Um visualizador de JSON que roda _sem backend_, e que seja capaz de carregar um JSON especificado pelo usuário e exibi-lo.
+---
 
-O sistema deve focar em ser capaz de exibir o maior JSON possível. O "usuário" poderá carregar o arquivo JSON que quiser, e ser capaz de visualizá-lo em forma de árvore conforme o layout: [VER O LAYOUT NO FIGMA](https://www.figma.com/file/DHYB13ESevMMip2Nx8skjf/Rinha-de-Front-end?type=design&node-id=0-1&mode=design).
+<h2 id="summary">O que foi desenvolvido 👩‍💻</h2>
 
-Vamos disponibilizar uma [pasta no Drive](https://drive.google.com/drive/folders/1oO0AoBQukdF3_DxRYn1di7O4Iiqom1wJ) com os arquivos de testes. Há alguns bem pequenos, outros enormes para a proposta. O layout diz respeito apenas ao output estático, e não versará sobre o comportamento de navegação do JSON que você carregar. Portanto, você é livre pra aplicar o comportamento e técnica que achar melhor para a navegação da sua tree view: paginação, infinite scrolling, lazy loading, vdom, windowing... E é aqui que começa a rinha: sua aplicação deve buscar carregar o maior arquivo possível dessa pasta. Você não precisa cumprir todos os critérios para entregar a sua aplicação. Faça o seu melhor, aprenda e divirta-se.
+<br>
 
-Boa sorte!
+Um **Visualizador de JSON** utilizando `React`, `CSS` e `JavaScript`.
 
-## Regras e Especificações
+<br>
 
-Em linhas simples, o objetivo final da Rinha de Frontend é carregar, de forma correta, o maior número de arquivos JSON possível (dos 9 arquivos disponibilizados por nós [aqui nesta pasta](https://drive.google.com/drive/folders/1oO0AoBQukdF3_DxRYn1di7O4Iiqom1wJ)). A ideia é começar do mais fácil ao mais complicado. O menor arquivo JSON possui apenas 98 _bytes_, enquanto o maior arquivo possui _181 megabytes_
+<details><summary>Desenvolvimento 🎯</summary>
+<p>
+Desenvolvi a aplicação utilizando a biblioteca [react-json-view](https://www.npmjs.com/package/react-json-view "Visitar a página da biblioteca") para visualizar o JSON na tela. Um dos grandes desafios da Rinha de Frontend foi implementar recursos para torna a aplicação acessível e a otimização para que o arquivo fosse renderizado no menor tempo possível.
+</p>
+</details>
 
-### Colocação Final dos Projetos
+<details><summary>Acessibilidade ♿️</summary>
+<p>
+Para tornar a página acessível, implementei os seguintes recursos:
 
-No momento em que você submeter seu projeto, você deverá também nos dizer qual foi o maior arquivo que a sua aplicação conseguiu carregar corretamente. Nós vamos fazer o _ranking_ de acordo com os projetos que carregaram os maiores arquivos.
+<ul>
+    <li>aria-label</li>
+    <li>aria-labelledby</li>
+    <li>aria-describedby</li>
+    <li>alt</li>
+    <li>tabindex</li>
+    <li>tradução da página para português, inglês e espanhol</li>
+    <li>Mensagem de erro para indicar o envio de arquivo inválido</li>
+    <li>Icone de loading enquanto o conteúdo do arquivo é carregado</li>
+    <li>Alteração da cor dos elementos no evento de hover</li>
+    <li>Lógica de desabilitar o botão quando não há conteúdo na tela, e habilita-lo quando há conteúdo</li>
+</ul>
+</p>
+</details>
 
-Dessa forma, se apenas 1 projeto conseguiu carregar o maior arquivo (`giant.json`), esse projeto será o vencedor. Isso irá acontecer sequencialmente até que tenhamos os 10 primeiros colocados rankeados.
+<details><summary>Otimização 🔧</summary>
+<p>
+Ver o que foi desativado no componente da biblioteca react-json-view
 
-Caso, ao final, existam mais de um projeto que conseguiram carregar os mesmos arquivos, vamos então para os critérios de desempate.
+enableClipboard={false}
+displayObjectSize={false}
+displayDataTypes={false}
+displayArrayKey={false}
+</p>
+</details>
 
-### Critérios de Desempate
+<details><summary>Estilização 🎨</summary>
+<p>
+Comentar quais recursos visuais que utilizei na página
 
-1. **Correctness**: Esse é o critério principal: A aplicação deve funcionar. Um JSON deve poder ser carregado e exibido conforme demonstrado no Layout (não necessariamente precisa ser o maior JSON, mas ao menos alguns deles). Além disso, aqui também vamos analisar como sua aplicação se comporta no caso de JSONs inválidos.
+Fontes: Nunito e Roboto (ver elementos e tamanhos da fonte)
 
-2. **Performance**: Sua aplicação deve buscar o maior nível de fluidez, quanto mais rápida e robusta, melhor pra você. Aplicações com performance instável (as vezes quebra, as vezes vai, as vezes trava) não terão os pontos desse critério. Vamos testar de forma manual a performance utilizando os mesmos recursos para os diferentes projetos.
+Cores:
+#efefef
+#d9d9d9
+#c3c3c3
+#333333
+#000000
+#818181
 
-3. **Acessibilidade**: Sua aplicação deverá ser o mais acessível que você puder (ideal que esteja completamente acessível). Deve ser possível navegar na sua _tree view_ de maneira acessível.
+Tipos de cursor
 
-De acordo com esses três itens acima, iremos realizar os desempates até que consigamos as 10 primeiras colocações. Para todas as outras colocações não iremos realizar desempates.  
+Icones
 
-### Análise
+Emojis
 
-Para as análises utilizaremos:
+outline
+</p>
+</details>
 
-- Performance: Time to Next Interaction (basicamente a velocidade da sua aplicação)
-- Core Web Vitals
-- Lighthouse Results
-- Accessibility Checks
-- Outras métricas a serem consideradas futuramente pela organização
+<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
 
-### Casos Não Previstos
+---
 
-Caso haja alguma situação imprevista, o time organizador se reserva o direito de decidir, caso a caso os casos não previstos, sem possibilidade de recurso (lembrando que o objetivo principal da rinha é ser um jogo 😄).
+<h2 id="tech">Tecnologias utilizadas 🛠</h2>
 
-## Stack
+<br>
 
-Você tem liberdade para escolher qualquer **stack**, **lib** ou **framework**. Contudo, sua aplicação deve ser totalmente executada no lado do cliente (Client) em termos de arquitetura web, sem depender de processamento server-side.
+<img title="React" alt="React" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /> <img title="CSS" alt="CSS" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /> <img title="JavaScript" alt="JavaScript" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+          
+<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
 
-Além disso, sua aplicação deve ser original e não pode ser uma cópia de outra nem usar libs que solucionem completamente o desafio proposto.
+---
 
-## Arquivos de Teste
+<h2 id="execute">Executar o projeto 💻</h2>
 
-[Download dos arquivos de teste](https://drive.google.com/drive/folders/1oO0AoBQukdF3_DxRYn1di7O4Iiqom1wJ)
+<br>
 
-Sua aplicação deve ser capaz de rodar o máximo possível de arquivos de teste na pasta disponibilizada, carregando 1 por vez. Os arquivos disponíveis são:
+<details><summary>Aplicação React 🎉</summary>
+<p>
+Para instalar as dependências e iniciar a aplicação React, execute os comandos na ordem a seguir:
 
-- alltypes.json
-- verysmall.json
-- small.json
-- pokedex.json
-- startwitharray.json
-- large.json
-- giant.json
-- invalid.json
-- nullreference.json
+```bash
+  git clone https://github.com/Kecbm/rinhadefrontend.git
+```
 
-## Submeter seu projeto
+```bash
+  cd src
+```
 
-Siga o passo-a-passo da plataforma para submeter o seu projeto.
+```bash
+  cd rinhadefrontend
+```
 
-1. Cadastre-se e clique em "Participar".
-2. Faça um fork do repositório base e desenvolva a sua solução nele.
-3. Faça o deploy do seu projeto via Github Pages ou qualquer outro serviço de host de sua escolha.
-4. Submeta o projeto na plataforma respondendo o formulário de submissão.
+```bash
+  npm install
+```
 
-Pronto! Boa sorte, e que vença o melhor!
+```bash
+  npm start
+```
 
-## Prazo
+</p>
+</details>
 
-Aceitaremos submissões até o dia 31/10/2023 às 23:59
+<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
 
-## Premiação
+---
 
-As 5 melhores soluções serão premiadas com um gift card da Kabum. 1º lugar: R$ 200,00; 2º lugar: R$ 150,00; 3º lugar: R$ 100,00; 4º lugar: R$ 50,00; 5º lugar: R$ 50,00.
+<h2 id="considerations">Minhas considerações durante o desenvolvimento 📝</h2>
 
-## Dúvidas, ajuda e sugestões
+<p>
 
-Para dúvidas, pedidos de ajuda ou sugestões, abra uma ISSUE nesse repositório prefixada por `[DÚVIDA]`, `[AJUDA]` ou `[SUGESTÃO]`.
+</p>
+
+<br>
+
+<details><summary>Documentação 📌</summary>
+<p>
+
+</p>
+</details>
+
+<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
+
+---
+
+Projeto desenvolvido por [Klecianny Melo](https://www.linkedin.com/in/kecbm/) 😁
