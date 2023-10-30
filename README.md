@@ -16,6 +16,8 @@
 
 <br>
 
+![Minha solução para a Rinha de Frontend](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/3.View.gif)
+
 O **Visualizador de JSON** é uma aplicação frontend desenvolvida com as seguintes tecnologias: `React`, `HTML`, `CSS` e `JavaScript`. Na aplicação, você pode carregar um arquivo JSON e visualizar seu conteúdo diretamente na tela. Se o arquivo JSON for inválido, a aplicação exibirá uma mensagem de erro, fornecendo informações sobre o problema.
 
 Para arquivos JSON de tamanho considerável, o tempo de renderização do conteúdo pode aumentar. Nesses casos, a aplicação exibirá um componente de carregamento para indicar que o conteúdo está sendo processado. Isso garante uma experiência mais suave para os usuários, mesmo com arquivos grandes.
@@ -77,27 +79,48 @@ Com essas otimizações, conseguimos alcançar o menor tempo de renderização n
 
 </details>
 
-<details><summary>Estilização 🎨</summary>
+<details>
+<summary>Estilização 🎨</summary>
 
-Comentar quais recursos visuais que utilizei na página
+Os recursos visuais aplicados na página são:
 
-Fontes: Nunito e Roboto (ver elementos e tamanhos da fonte)
+- **Fontes**:
+- Utilizei as fontes Nunito e Roboto em diferentes tamanhos para melhorar a legibilidade:
+    - Select: 18px
+    - Título: 36px
+    - Descrição: 20px
+    - Textos: 20 ou 18px
+    - Botão: 18px
+    - Título: 36px
 
-Cores:
-#efefef
-#d9d9d9
-#c3c3c3
-#333333
-#000000
-#818181
+- **Cores**:
+- Selecionei cores que proporcionam uma experiência agradável ao usuário:
+    - #efefef
+    - #d9d9d9
+    - #c3c3c3
+    - #333333
+    - #000000
+    - #818181
 
-Tipos de cursor: default, pointer e not-allowed
+- **Tipos de Cursor**:
+- Implementei três tipos de cursor para fornecer feedback visual:
+    - Padrão (default)
+    - Apontador (pointer)
+    - Não permitido (not-allowed)
 
-Icones: pasta aberta no input de enviar arquivo, lixeira no botão de limpar o conteúdo
+- **Ícones**:
+- Integrei ícones para melhorar a usabilidade:
+    - Utilizei um ícone de pasta aberta no campo de envio de arquivo.
+    - Adicionei um ícone de lixeira no botão de limpar conteúdo.
 
-Emojis: bandeira dos paises referentes aos idiomas disponíveis na aplicação (inglês, espanhol e português) e coração no footer
+- **Emojis**:
+- Introduzi emojis representando as bandeiras dos países relacionados aos idiomas disponíveis na aplicação (inglês, espanhol e português).
+- No rodapé, adicionei um emoji de coração para um toque amigável.
 
-outline: para marcar o contepudo que está sendo focado pela navegação do usuário
+- **Esquema de Contorno**:
+- Implementei contornos visuais para destacar o elemento atualmente focado durante a navegação do usuário.
+
+Esses recursos de estilização foram aplicados cuidadosamente para aprimorar a estética e a usabilidade da aplicação.
 
 </details>
 
@@ -167,4 +190,23 @@ OBS.: Não consegui, até então, instalar o Es Lint no projeto pois deu vários
 
 ---
 
-Projeto desenvolvido por [Klecianny Melo](https://www.linkedin.com/in/kecbm/) 😁
+<h2 id="nextsteps">Próximos passos 📝</h2>
+
+Visando oferecer um Software de melhoria continua, considerando o ciclo do desenvolvimento MVP onde é realizada a análise do retorno dos clientes a cada nova entrega e ajustes nas funcionalidades existentes ou desenvolvimentos de novas funcionalidades, a seguir listo uma série de etapas futuras a serem realizadas no projeto, o que forma um backlog do produto. Sinta-se a vontade para contribuir com essa lista.
+
+<br>
+
+- [ ] Desenvolvimento de uma estrutura de select de idiomas padronizada;
+- [ ] Adição de novas propriedades de acessibilidade;
+- [ ] Responsividades para dispositivos com telas pequenas e médias;
+- [ ] Transformar a home em uma página da aplicação;
+- [ ] Adicionar mais informações ao footer;
+- [ ] Desenvolver estilização para página Not Found;
+
+<br>
+
+<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
+
+---
+
+<p align="center">Projeto desenvolvido por <a href="https://www.linkedin.com/in/kecbm/" target="_blank" rel="noopener noreferrer">Klecianny Melo</a> 😁</p>
