@@ -26,7 +26,6 @@ Desenvolvi a aplicação utilizando a biblioteca [React JSON View](https://www.n
 </details>
 
 <details><summary>Acessibilidade ♿️</summary>
-<p>
 Para tornar a página acessível, implementei os seguintes recursos:
 
 <ul>
@@ -41,22 +40,22 @@ Para tornar a página acessível, implementei os seguintes recursos:
     <li>Alteração da cor dos elementos no evento de hover</li>
     <li>Lógica de desabilitar o botão quando não há conteúdo na tela, e habilita-lo quando há conteúdo</li>
 </ul>
-</p>
+
 </details>
 
 <details><summary>Otimização 🔧</summary>
-<p>
+
 Ver o que foi desativado no componente da biblioteca react-json-view
 
 enableClipboard={false}
 displayObjectSize={false}
 displayDataTypes={false}
 displayArrayKey={false}
-</p>
+
 </details>
 
 <details><summary>Estilização 🎨</summary>
-<p>
+
 Comentar quais recursos visuais que utilizei na página
 
 Fontes: Nunito e Roboto (ver elementos e tamanhos da fonte)
@@ -76,7 +75,7 @@ Icones
 Emojis
 
 outline
-</p>
+
 </details>
 
 <p align="right"><a href="#top">Voltar ao topo ☝</a></p>
@@ -98,7 +97,7 @@ outline
 <br>
 
 <details><summary>Aplicação React 🎉</summary>
-<p>
+
 Para instalar as dependências e iniciar a aplicação React, execute os comandos na ordem a seguir:
 
 ```bash
@@ -121,7 +120,6 @@ Para instalar as dependências e iniciar a aplicação React, execute os comando
   npm start
 ```
 
-</p>
 </details>
 
 <p align="right"><a href="#top">Voltar ao topo ☝</a></p>
@@ -130,20 +128,20 @@ Para instalar as dependências e iniciar a aplicação React, execute os comando
 
 <h2 id="considerations">Minhas considerações durante o desenvolvimento 📝</h2>
 
-<p>
+Comentar quais foram os desafios encontrados e o que eu priorizei solucionar.
 
-</p>
+OBS.: Não consegui, até então, instalar o Es Lint no projeto pois deu vários erros que não consegui resolver.
 
 <br>
 
 <details><summary>Documentação 📌</summary>
-<p>
 
-</p>
+Elaborar uma documentação para o projeto, com instruções de como executá-lo.
+
 </details>
 
 <p align="right"><a href="#top">Voltar ao topo ☝</a></p>
 
 ---
 
-<p align="center">Projeto desenvolvido por [Klecianny Melo](https://www.linkedin.com/in/kecbm/) 😁</p>
+Projeto desenvolvido por [Klecianny Melo](https://www.linkedin.com/in/kecbm/) 😁
