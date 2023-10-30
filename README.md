@@ -85,40 +85,40 @@ Com essas otimizações, conseguimos alcançar o menor tempo de renderização n
 Os recursos visuais aplicados na página são:
 
 - **Fontes**:
-- Utilizei as fontes Nunito e Roboto em diferentes tamanhos para melhorar a legibilidade:
-    - Select: 18px
-    - Título: 36px
-    - Descrição: 20px
-    - Textos: 20 ou 18px
-    - Botão: 18px
-    - Título: 36px
+  - Utilizei as fontes Nunito e Roboto em diferentes tamanhos para melhorar a legibilidade:
+      - Select: 18px
+      - Título: 36px
+      - Descrição: 20px
+      - Textos: 20 ou 18px
+      - Botão: 18px
+      - Título: 36px
 
 - **Cores**:
-- Selecionei cores que proporcionam uma experiência agradável ao usuário:
-    - #efefef
-    - #d9d9d9
-    - #c3c3c3
-    - #333333
-    - #000000
-    - #818181
+  - Selecionei cores que proporcionam uma experiência agradável ao usuário:
+      - #efefef
+      - #d9d9d9
+      - #c3c3c3
+      - #333333
+      - #000000
+      - #818181
 
 - **Tipos de Cursor**:
-- Implementei três tipos de cursor para fornecer feedback visual:
-    - Padrão (default)
-    - Apontador (pointer)
-    - Não permitido (not-allowed)
+  - Implementei três tipos de cursor para fornecer feedback visual:
+      - Padrão (default)
+      - Apontador (pointer)
+      - Não permitido (not-allowed)
 
 - **Ícones**:
-- Integrei ícones para melhorar a usabilidade:
-    - Utilizei um ícone de pasta aberta no campo de envio de arquivo.
-    - Adicionei um ícone de lixeira no botão de limpar conteúdo.
+  - Integrei ícones para melhorar a usabilidade:
+      - Utilizei um ícone de pasta aberta no campo de envio de arquivo.
+      - Adicionei um ícone de lixeira no botão de limpar conteúdo.
 
 - **Emojis**:
-- Introduzi emojis representando as bandeiras dos países relacionados aos idiomas disponíveis na aplicação (inglês, espanhol e português).
-- No rodapé, adicionei um emoji de coração para um toque amigável.
+  - Introduzi emojis representando as bandeiras dos países relacionados aos idiomas disponíveis na aplicação (inglês, espanhol e português).
+  - No rodapé, adicionei um emoji de coração para um toque amigável.
 
 - **Esquema de Contorno**:
-- Implementei contornos visuais para destacar o elemento atualmente focado durante a navegação do usuário.
+  - Implementei contornos visuais para destacar o elemento atualmente focado durante a navegação do usuário.
 
 Esses recursos de estilização foram aplicados cuidadosamente para aprimorar a estética e a usabilidade da aplicação.
 
