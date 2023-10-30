@@ -7,7 +7,7 @@
 - [Executar o projeto](#execute)
 - [Minhas considerações durante o desenvolvimento](#considerations)
 
-<h3>👉 Clique nos tópicos com seta a direita para expandir o conteúdo</h3>
+<h5>👉 Clique nos tópicos com seta a direita para expandir o conteúdo</h5>
 
 ---
 
@@ -21,7 +21,7 @@ Um **Visualizador de JSON** utilizando `React`, `CSS` e `JavaScript`.
 
 <details><summary>Desenvolvimento 🎯</summary>
 <p>
-Desenvolvi a aplicação utilizando a biblioteca [react-json-view](https://www.npmjs.com/package/react-json-view "Visitar a página da biblioteca") para visualizar o JSON na tela. Um dos grandes desafios da Rinha de Frontend foi implementar recursos para torna a aplicação acessível e a otimização para que o arquivo fosse renderizado no menor tempo possível.
+Desenvolvi a aplicação utilizando a biblioteca [React JSON View](https://www.npmjs.com/package/react-json-view) para visualizar o JSON na tela. Um dos grandes desafios da Rinha de Frontend foi implementar recursos para torna a aplicação acessível e a otimização para que o arquivo fosse renderizado no menor tempo possível.
 </p>
 </details>
 
@@ -87,7 +87,7 @@ outline
 
 <br>
 
-<img title="React" alt="React" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /> <img title="CSS" alt="CSS" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /> <img title="JavaScript" alt="JavaScript" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+<img title="React" alt="React" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /> <img title="CSS" alt="CSS" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />  <img title="HTML" alt="HTML" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /> <img title="JavaScript" alt="JavaScript" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
           
 <p align="right"><a href="#top">Voltar ao topo ☝</a></p>
 
@@ -146,4 +146,4 @@ Para instalar as dependências e iniciar a aplicação React, execute os comando
 
 ---
 
-Projeto desenvolvido por [Klecianny Melo](https://www.linkedin.com/in/kecbm/) 😁
+<p align="center">Projeto desenvolvido por [Klecianny Melo](https://www.linkedin.com/in/kecbm/) 😁</p>
