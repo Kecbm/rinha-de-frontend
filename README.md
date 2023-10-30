@@ -127,10 +127,6 @@ Para clonar o projeto, instalar as dependências e iniciar a aplicação `React`
 ```
 
 ```bash
-  cd src
-```
-
-```bash
   cd rinhadefrontend
 ```
 
