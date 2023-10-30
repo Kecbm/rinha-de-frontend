@@ -69,16 +69,9 @@ function App() {
   };
 
   const languageOptions = [
-    { value: 'ar', label: '🇸🇦 Árabe' },
-    // { value: 'bn', label: '🇧🇩 Bengali' },
-    { value: 'zh', label: '🇨🇳 Chinês' },
     { value: 'en', label: '🇺🇸 English' },
     { value: 'la', label: '🇪🇸 Espanhol' },
-    { value: 'hi', label: '🇮🇳 Hindi' },
-    { value: 'ja', label: '🇯🇵 Japonês' },
-    { value: 'pa', label: '🇵🇰 Punjabi' },
     { value: 'pt', label: '🇧🇷 Português' },
-    { value: 'ru', label: '🇷🇺 Russo' },
   ];
 
   return (
