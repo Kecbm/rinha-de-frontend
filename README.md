@@ -3,6 +3,7 @@
 <h2>Sumário:</h2>
 
 - [O que foi desenvolvido](#summary)
+- [Documentação](#doc)
 - [Tecnologias utilizadas](#tech)
 - [Executar o projeto](#execute)
 - [Minhas considerações durante o desenvolvimento](#considerations)
@@ -104,7 +105,7 @@ outline: para marcar o contepudo que está sendo focado pela navegação do usu�
 
 ---
 
-<h2 id="tech">Documentação 📕</h2>
+<h2 id="doc">Documentação 📕</h2>
 
 <br>
 
