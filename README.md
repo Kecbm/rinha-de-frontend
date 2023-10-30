@@ -1,4 +1,4 @@
-<h1 id="top" align="center">Boas vindas ao repositório do Visualizador de JSON 📄</h1>
+<h1 id="top" align="center">Visualizador de JSON 📄</h1>
 
 <h2>Sumário:</h2>
 
