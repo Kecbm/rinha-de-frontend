@@ -104,6 +104,16 @@ outline: para marcar o contepudo que está sendo focado pela navegação do usu�
 
 ---
 
+<h2 id="tech">Documentação 📕</h2>
+
+<br>
+
+Documentar passo a passo de como utilizar a aplicação; Gravar um GIF de cada etapa
+
+<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
+
+---
+
 <h2 id="tech">Tecnologias utilizadas 🛠</h2>
 
 <br>
@@ -151,12 +161,6 @@ Comentar quais foram os desafios encontrados e o que eu priorizei solucionar.
 OBS.: Não consegui, até então, instalar o Es Lint no projeto pois deu vários erros que não consegui resolver.
 
 <br>
-
-<details><summary>Documentação 📌</summary>
-
-Elaborar uma documentação para o projeto, com instruções de como executá-lo.
-
-</details>
 
 <p align="right"><a href="#top">Voltar ao topo ☝</a></p>
 
