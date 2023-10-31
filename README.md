@@ -2,17 +2,17 @@
 
 <h2>Sumário:</h2>
 
-- [O que foi desenvolvido](#summary)
-- [Documentação](#doc)
-- [Tecnologias utilizadas](#tech)
-- [Executar o projeto](#execute)
-- [Minhas considerações durante o desenvolvimento](#considerations)
+- O que foi desenvolvido
+- Documentação
+- Tecnologias utilizadas
+- Executar o projeto
+- Minhas considerações durante o desenvolvimento
 
 <h5>👉 Clique nos tópicos com seta a direita para expandir o conteúdo</h5>
 
 ---
 
-<h2 id="summary">O que foi desenvolvido 👩‍💻</h2>
+<h2>O que foi desenvolvido 👩‍💻</h2>
 
 <br>
 
@@ -128,7 +128,7 @@ Esses recursos de estilização foram aplicados cuidadosamente para aprimorar a 
 
 ---
 
-<h2 id="doc">Documentação 📕</h2>
+<h2>Documentação 📕</h2>
 
 <br>
 
@@ -177,7 +177,7 @@ Esses passos simples garantem uma navegação eficaz na aplicação, permitindo 
 
 ---
 
-<h2 id="tech">Tecnologias utilizadas 🛠</h2>
+<h2>Tecnologias utilizadas 🛠</h2>
 
 <br>
 
@@ -187,7 +187,7 @@ Esses passos simples garantem uma navegação eficaz na aplicação, permitindo 
 
 ---
 
-<h2 id="execute">Executar o projeto 💻</h2>
+<h2>Executar o projeto 💻</h2>
 
 <br>
 
@@ -217,11 +217,13 @@ Para clonar o projeto, instalar as dependências e iniciar a aplicação `React`
 
 ---
 
-<h2 id="considerations">Minhas considerações durante o desenvolvimento 📝</h2>
+<h2>Minhas considerações durante o desenvolvimento 📝</h2>
 
-Comentar quais foram os desafios encontrados e o que eu priorizei solucionar.
+Infelizmente eu não consegui iniciar o EsLint na aplicação, encontrei o seguinte erro:
 
-OBS.: Não consegui, até então, instalar o Es Lint no projeto pois deu vários erros que não consegui resolver.
+
+
+Busquei soluções porém não funcionou 🙁
 
 <br>
 
@@ -229,7 +231,7 @@ OBS.: Não consegui, até então, instalar o Es Lint no projeto pois deu vários
 
 ---
 
-<h2 id="nextsteps">Próximos passos 📝</h2>
+<h2>Próximos passos 📝</h2>
 
 Visando oferecer um Software de melhoria continua, considerando o ciclo do desenvolvimento MVP (Produto Mínimo Viável) onde é realizada a análise do retorno dos clientes a cada nova entrega e ajustes nas funcionalidades existentes ou desenvolvimentos de novas funcionalidades, a seguir listo uma série de etapas futuras a serem realizadas no projeto, o que forma um backlog do produto. Sinta-se a vontade para contribuir com essa lista.
 
