@@ -219,11 +219,11 @@ Para clonar o projeto, instalar as dependências e iniciar a aplicação `React`
 
 <h2>Minhas considerações durante o desenvolvimento 📝</h2>
 
-Infelizmente eu não consegui iniciar o EsLint na aplicação, encontrei o seguinte erro:
+Durante o processo de desenvolvimento, encontrei um desafio com a inicialização do ESlint na aplicação, que resultou no seguinte erro:
 
+![Erro na inicialização do ESlint](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/1.EsLint.png)
 
-
-Busquei soluções porém não funcionou 🙁
+Apesar de ter realizado diversas tentativas de resolução, não obtive sucesso em solucionar esse problema 🙁
 
 <br>
 
