@@ -132,7 +132,46 @@ Esses recursos de estilização foram aplicados cuidadosamente para aprimorar a 
 
 <br>
 
-Documentar passo a passo de como utilizar a aplicação; Gravar um GIF de cada etapa
+**Acessando a Aplicação Passo a Passo**
+
+Vou detalhar como acessar a aplicação, passo a passo:
+
+- **Escolhendo o Idioma**:
+
+A primeira funcionalidade do site permite que você escolha o idioma exibido, com opções em _Inglês_, _Espanhol_ e _Português_.
+Para fazer isso, clique no texto correspondente ao idioma desejado (por exemplo, Português) e selecione sua preferência. A página será traduzida automaticamente para o idioma escolhido.
+
+Veja o exemplo abaixo:
+
+![Selecionando o idioma do site](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/2.Language.gif)
+
+- **Visualizando um Arquivo JSON**:
+
+Na aplicação, você pode selecionar um arquivo JSON e visualizar seu conteúdo na tela.
+Para fazer isso, clique no texto Insira o arquivo JSON aqui, o que abrirá as pastas do seu dispositivo.
+Basta selecionar o arquivo JSON que deseja visualizar.
+
+- **Limpando o Conteúdo**:
+
+Após visualizar o conteúdo do arquivo, o botão Limpar conteúdo será ativado. Clicando nele, você limpa o conteúdo da tela.
+
+Veja o exemplo abaixo:
+
+![Visualizando o conteúdo de um arquivo JSON](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/3.View.gif)
+
+- **Arquivo JSON Inválido**:
+
+Se você selecionar um arquivo inválido, receberá uma mensagem de erro indicando o problema, como mostrado abaixo:
+
+![Arquivo JSON inválido](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/4.Error.gif)
+
+- **Carregamento de Arquivo Grande**:
+
+Quando você seleciona um arquivo grande, um componente visual aparece na tela, indicando que o conteúdo está sendo carregado. Isso permite uma experiência tranquila durante o carregamento do arquivo, como ilustrado abaixo:
+
+![Loading do arquivo JSON](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/5.Loading.gif)
+
+Esses passos simples garantem uma navegação eficaz na aplicação, permitindo que você aproveite ao máximo seus recursos.
 
 <p align="right"><a href="#top">Voltar ao topo ☝</a></p>
 
@@ -192,11 +231,12 @@ OBS.: Não consegui, até então, instalar o Es Lint no projeto pois deu vários
 
 <h2 id="nextsteps">Próximos passos 📝</h2>
 
-Visando oferecer um Software de melhoria continua, considerando o ciclo do desenvolvimento MVP onde é realizada a análise do retorno dos clientes a cada nova entrega e ajustes nas funcionalidades existentes ou desenvolvimentos de novas funcionalidades, a seguir listo uma série de etapas futuras a serem realizadas no projeto, o que forma um backlog do produto. Sinta-se a vontade para contribuir com essa lista.
+Visando oferecer um Software de melhoria continua, considerando o ciclo do desenvolvimento MVP (Produto Mínimo Viável) onde é realizada a análise do retorno dos clientes a cada nova entrega e ajustes nas funcionalidades existentes ou desenvolvimentos de novas funcionalidades, a seguir listo uma série de etapas futuras a serem realizadas no projeto, o que forma um backlog do produto. Sinta-se a vontade para contribuir com essa lista.
 
 <br>
 
-- [ ] Desenvolvimento de uma estrutura de select de idiomas padronizada;
+- [ ] Escrever testes para a aplicação;
+- [ ] Desenvolvimento de uma estrutura de select de idiomas personalizada;
 - [ ] Adição de novas propriedades de acessibilidade;
 - [ ] Responsividades para dispositivos com telas pequenas e médias;
 - [ ] Transformar a home em uma página da aplicação;
