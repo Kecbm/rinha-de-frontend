@@ -265,7 +265,7 @@ Visando oferecer um Software de melhoria continua, considerando o ciclo do desen
 
 <br>
 
-- [ ] Escrever testes para a aplicação;
+- [ ] Escrever mais casos de testes para a aplicação;
 - [ ] Desenvolvimento de uma estrutura de select de idiomas personalizada;
 - [ ] Adição de novas propriedades de acessibilidade;
 - [ ] Responsividades para dispositivos com telas pequenas e médias;
