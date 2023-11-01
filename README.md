@@ -196,11 +196,11 @@ Esses passos simples garantem uma navegação eficaz na aplicação, permitindo 
 Para clonar o projeto, instalar as dependências e iniciar a aplicação `React`, execute os comandos na ordem a seguir:
 
 ```bash
-  git clone https://github.com/Kecbm/rinhadefrontend.git
+  git clone https://github.com/Kecbm/rinha-de-frontend.git
 ```
 
 ```bash
-  cd rinhadefrontend
+  cd rinha-de-frontend
 ```
 
 ```bash
@@ -210,6 +210,30 @@ Para clonar o projeto, instalar as dependências e iniciar a aplicação `React`
 ```bash
   npm start
 ```
+
+</details>
+
+<details><summary>Testes </summary>
+
+Para rodar os testes do projeto, execute os comandos na ordem a seguir:
+
+```bash
+  git clone https://github.com/Kecbm/rinha-de-frontend.git
+```
+
+```bash
+  cd rinha-de-frontend
+```
+
+```bash
+  npm install
+```
+
+```bash
+  npm test
+```
+
+![Testes da aplicação](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/6.Testes.png)
 
 </details>
 
