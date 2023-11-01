@@ -213,7 +213,7 @@ Para clonar o projeto, instalar as dependências e iniciar a aplicação `React`
 
 </details>
 
-<details><summary>Testes </summary>
+<details><summary>Testes 🧪</summary>
 
 Para rodar os testes do projeto, execute os comandos na ordem a seguir:
 
