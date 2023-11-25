@@ -7,7 +7,7 @@ function App() {
   const [inputJSON, setInputJSON] = useState(null);
   const [inputFileName, setInputFileName] = useState('');
   const [submitJSON, setSubimitJSON] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState('pt');
+  const [selectedLanguage, setSelectedLanguage] = useState('en');
   const [invalidJson, setInvalidJson] = useState(null);
   const [buttonId, setButtonId] = useState('btn-clear');
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -212,6 +212,9 @@ function App() {
         >
           {translations[selectedLanguage].devText} <a href="https://github.com/Kecbm" target="_blank"  rel="noreferrer">Klecianny Melo</a>
         </p>
+        <a href="https://github.com/Kecbm/viewer-json" target="_blank"  rel="noreferrer">
+          <img width="35" height="35" src="https://img.icons8.com/ios-filled/50/github.png" alt="GitHub" title="GitHub" id="github-icon" />
+        </a>
       </footer>
     </div>
   );
