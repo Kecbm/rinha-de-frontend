@@ -1,199 +1,199 @@
-<h1 id="top" align="center">Visualizador de JSON 📄</h1>
+<h1 id="top" align="center">JSON Viewer 📄</h1>
 
-<h2>Sumário:</h2>
+<h2>Summary:</h2>
 
-- O que foi desenvolvido
-- Documentação
-- Tecnologias utilizadas
-- Executar o projeto
-- Minhas considerações durante o desenvolvimento
+- What was developed
+- Documentation
+- Technologies used
+- Execute the project
+- My considerations during development
 
-<h5>👉 Clique nos tópicos com seta a direita para expandir o conteúdo</h5>
+<h5>👉 Click on topics with the right arrow to expand the content</h5>
 
 ---
 
-<h2>O que foi desenvolvido 👩‍💻</h2>
+<h2>What was developed 👩‍💻</h2>
 
 <br>
 
 ![Minha solução para a Rinha de Frontend](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/3.View.gif)
 
-O **Visualizador de JSON** é uma aplicação frontend desenvolvida com as seguintes tecnologias: `React`, `HTML`, `CSS` e `JavaScript`. Na aplicação, você pode carregar um arquivo JSON e visualizar seu conteúdo diretamente na tela. Se o arquivo JSON for inválido, a aplicação exibirá uma mensagem de erro, fornecendo informações sobre o problema.
+**JSON Viewer** is a frontend application developed with the following technologies: `React`, `HTML`, `CSS` and `JavaScript`. In the application, you can load a JSON file and view its content directly on the screen. If the JSON file is invalid, the application will display an error message, providing information about the problem.
 
-Para arquivos JSON de tamanho considerável, o tempo de renderização do conteúdo pode aumentar. Nesses casos, a aplicação exibirá um componente de carregamento para indicar que o conteúdo está sendo processado. Isso garante uma experiência mais suave para os usuários, mesmo com arquivos grandes.
+For JSON files of considerable size, content rendering time may increase. In these cases, the application will display a loading component to indicate that the content is being processed. This ensures a smoother experience for users, even with large files.
 
-Uma característica essencial desta aplicação é a capacidade de escolher entre três idiomas disponíveis: _inglês_, _espanhol_ e _português_. Isso permite que os usuários acessem a aplicação no idioma de sua preferência, tornando-a mais inclusiva.
+An essential feature of this application is the ability to choose between three available languages: _English_, _Spanish_ and _Portuguese_. This allows users to access the application in their preferred language, making it more inclusive.
 
-Além disso, o **Visualizador de JSON** foi projetado com recursos de acessibilidade. É compatível com leitores de tela, facilitando a navegação e compreensão para usuários com deficiências visuais. Além disso, a aplicação pode ser facilmente navegada usando a tecla Tab no teclado, garantindo que todos os elementos sejam acessíveis a partir do teclado. Tornando a aplicação amigável para todos os usuários.
+Additionally, **JSON Viewer** is designed with accessibility features. It is compatible with screen readers, making navigation and understanding easier for users with visual impairments. Furthermore, the application can be easily navigated using the Tab key on the keyboard, ensuring that all elements are accessible from the keyboard. Making the application user-friendly for all users.
 <br>
 
-<details><summary>Desenvolvimento 🎯</summary>
+<details><summary>Development 🎯</summary>
 
-A aplicação foi cuidadosamente desenvolvida, com foco na usabilidade e na eficiência. Algumas das principais características do desenvolvimento incluem:
+The application was carefully developed, with a focus on usability and efficiency. Some of the key features of the development include:
 
-- **React JSON View**: Utilizei a biblioteca [React JSON View](https://www.npmjs.com/package/react-json-view) para criar uma visualização imersiva e amigável do JSON diretamente na tela, tornando a experiência de visualização mais eficiente;
+- **React JSON View**: I used the [React JSON View](https://www.npmjs.com/package/react-json-view) library to create an immersive and user-friendly JSON view directly on the screen, making the most efficient viewing experience;
 
-- **Acessibilidade Prioritária**: Um dos principais desafios foi garantir que a aplicação fosse acessível a todos. Implementei recursos, como rótulos ARIA e descrições alternativas, para melhorar a experiência de usuários com deficiências visuais e necessidades de navegação assistida;
+- **Priority Accessibility**: One of the main challenges was ensuring that the application was accessible to everyone. Implemented features such as ARIA labels and alternative descriptions to improve the experience for users with visual impairments and assisted navigation needs;
 
-- **Otimização de Desempenho**: Reconheõ a importância de uma renderização rápida, especialmente ao lidar com arquivos grandes. Implementei otimizações para garantir que o conteúdo seja processado e exibido o mais rapidamente possível, tornando a interação com a aplicação mais ágil.
+- **Performance Optimization**: Recognizes the importance of fast rendering, especially when dealing with large files. I implemented optimizations to ensure that content is processed and displayed as quickly as possible, making interaction with the application more agile.
 
-O objetivo é oferecer uma experiência de alta qualidade aos usuários, garantindo que a acessibilidade e o desempenho estejam no centro do desenvolvimento.
-
-</details>
-
-<details><summary>Acessibilidade ♿️</summary>
-
-Minha preocupação com a acessibilidade se reflete em uma série de recursos cuidadosamente implementados para garantir que os usuários tenham a melhor experiência possível:
-
-- **Rótulos ARIA**: Utilizei aria-label, aria-labelledby e aria-describedby para fornecer informações e contextos significativos para elementos, tornando a navegação mais compreensível para leitores de tela;
-
-- **Textos Alternativos**: Implementei atributos alt em imagens para descrever seu conteúdo, beneficiando usuários que não podem visualizar as imagens;
-
-- **Navegação por Teclado**: O uso aprimorado do atributo tabindex permite uma navegação mais eficiente da página usando apenas o teclado;
-
-- **Multilíngue**: A página pode ser traduzida para três idiomas: português, inglês e espanhol, garantindo que os usuários possam escolher o idioma de sua preferência;
-
-- **Feedback para Erros**: Implementei mensagem de erro para indicar quando um arquivo inválido é enviado, ajudando os usuários a entenderem o problema;
-
-- **Experiência Ininterrupta**: Um ícone de carregamento será renderizado na tela enquanto o conteúdo do arquivo é processado, tornando a espera mais clara e menos frustrante para todos;
-
-- **Interatividade Melhorada**: Alterei as cores dos elementos em resposta aos eventos de hover e clique, tornando a experiência mais dinâmica e interativa;
-
-- **Botão Inteligente**: Adotei uma lógica que desabilita o botão quando não há conteúdo na tela, habilitando-o automaticamente quando o conteúdo está disponível, melhorando a usabilidade geral da página.
+The goal is to deliver a high-quality experience to users, ensuring that accessibility and performance are at the heart of development.
 
 </details>
 
-<details><summary>Otimização 🔧</summary>
+<details><summary>Accessibility ♿️</summary>
 
-Visando proporcionar a melhor experiência aos usuários ao visualizar arquivos JSON na tela, adotei uma abordagem de _otimização_. Para alcançar o menor tempo de renderização possível, desativei alguns recursos da biblioteca React JSON View:
+My concern for accessibility is reflected in a series of carefully implemented features to ensure users have the best experience possible:
 
-- **Habilitação da Área de Transferência (Clipboard)**: A funcionalidade de copiar para a área de transferência foi desativada para minimizar a carga de processamento.
+- **ARIA Labels**: I used aria-label, aria-labelledby and aria-describedby to provide meaningful information and context for elements, making navigation more understandable for screen readers;
 
-- **Exibição de Tamanho de Objetos**: A página não exibe o tamanho dos objetos, pois isso pode gerar um aumento no tempo de renderização.
+- **Alternative Texts**: I implemented alt attributes on images to describe their content, benefiting users who cannot view the images;
 
-- **Exibição de Tipos de Dados**: Desativei a exibição dos tipos de dados, o que ajuda a simplificar o processo de renderização.
+- **Keyboard Navigation**: Improved use of the tabindex attribute allows for more efficient page navigation using just the keyboard;
 
-- **Exibição de Chaves de Arrays**: Também optei por não exibir as chaves dos arrays, o que contribui para um carregamento mais rápido.
+- **Multilingual**: The page can be translated into three languages: Portuguese, English and Spanish, ensuring that users can choose the language they prefer;
 
-Com essas otimizações, conseguimos alcançar o menor tempo de renderização na tela, garantindo que os usuários desfrutem de uma experiência ágil ao visualizar arquivos JSON na aplicação.
+- **Feedback for Errors**: I implemented an error message to indicate when an invalid file is sent, helping users understand the problem;
+
+- **Seamless Experience**: A loading icon will be rendered on the screen while the file contents are processed, making the wait clearer and less frustrating for everyone;
+
+- **Improved Interactivity**: I changed the colors of the elements in response to hover and click events, making the experience more dynamic and interactive;
+
+- **Smart Button**: I adopted a logic that disables the button when there is no content on the screen, automatically enabling it when the content is available, improving the overall usability of the page.
+
+</details>
+
+<details><summary>Optimization 🔧</summary>
+
+In order to provide the best experience for users when viewing JSON files on the screen, I adopted an _optimization_ approach. To achieve the shortest possible rendering time, I disabled some features of the React JSON View library:
+
+- **Clipboard Enablement**: The copy to clipboard functionality has been disabled to minimize processing load.
+
+- **Object Size Display**: The page does not display the size of objects, as this may increase rendering time.
+
+- **Data Type Display**: I disabled the data type display, which helps simplify the rendering process.
+
+- **Display of Array Keys**: I also chose not to display the array keys, which contributes to faster loading.
+
+With these optimizations, we were able to achieve the shortest screen rendering time, ensuring that users enjoy a streamlined experience when viewing JSON files in the application.
 
 </details>
 
 <details>
-<summary>Estilização 🎨</summary>
+<summary>Styling 🎨</summary>
 
-Os recursos visuais aplicados na página são:
+The visual resources applied to the page are:
 
-- **Fontes**:
-  - Utilizei as fontes Nunito e Roboto em diferentes tamanhos para melhorar a legibilidade:
-      - Select: 18px
-      - Título: 36px
-      - Descrição: 20px
-      - Textos: 20 ou 18px
-      - Botão: 18px
-      - Título: 36px
+- **Sources**:
+   - I used Nunito and Roboto fonts in different sizes to improve readability:
+       - Select: 18px
+       - Title: 36px
+       - Description: 20px
+       - Texts: 20 or 18px
+       - Button: 18px
+       - Title: 36px
 
-- **Cores**:
-  - Selecionei cores que proporcionam uma experiência agradável ao usuário:
-      - #efefef
-      - #d9d9d9
-      - #c3c3c3
-      - #333333
-      - #000000
-      - #818181
+- **Colors**:
+   - I selected colors that provide a pleasant user experience:
+       - #efefef
+       - #d9d9d9
+       - #c3c3c3
+       - #333333
+       - #000000
+       - #818181
 
-- **Tipos de Cursor**:
-  - Implementei três tipos de cursor para fornecer feedback visual:
-      - Padrão (default)
-      - Apontador (pointer)
-      - Não permitido (not-allowed)
+- **Cursor Types**:
+   - I implemented three types of cursor to provide visual feedback:
+       - Standard (default)
+       - Pointer
+       - Not-allowed
 
-- **Ícones**:
-  - Integrei ícones para melhorar a usabilidade:
-      - Utilizei um ícone de pasta aberta no campo de envio de arquivo.
-      - Adicionei um ícone de lixeira no botão de limpar conteúdo.
+- **Icons**:
+   - I integrated icons to improve usability:
+       - I used an open folder icon in the file upload field.
+       - Added a trash icon to the clear content button.
 
 - **Emojis**:
-  - Introduzi emojis representando as bandeiras dos países relacionados aos idiomas disponíveis na aplicação (inglês, espanhol e português).
-  - No rodapé, adicionei um emoji de coração para um toque amigável.
+   - I introduced emojis representing the flags of countries related to the languages available in the application (English, Spanish and Portuguese).
+   - In the footer, I added a heart emoji for a friendly touch.
 
-- **Esquema de Contorno**:
-  - Implementei contornos visuais para destacar o elemento atualmente focado durante a navegação do usuário.
+- **Outline Scheme**:
+   - Implemented visual outlines to highlight the currently focused element during user navigation.
 
-Esses recursos de estilização foram aplicados cuidadosamente para aprimorar a estética e a usabilidade da aplicação.
+These styling features have been carefully applied to enhance the aesthetics and usability of the application.
 
 </details>
 
-<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
+<p align="right"><a href="#top">Back to the top ☝</a></p>
 
 ---
 
-<h2>Documentação 📕</h2>
+<h2>Documentation 📕</h2>
 
 <br>
 
-**Acessando a Aplicação Passo a Passo**
+**Accessing the Application Step by Step**
 
-Vou detalhar como acessar a aplicação, passo a passo:
+I will detail how to access the application, step by step:
 
-- **Escolhendo o Idioma**:
+- **Choosing the Language**:
 
-A primeira funcionalidade do site permite que você escolha o idioma exibido, com opções em _Inglês_, _Espanhol_ e _Português_.
-Para fazer isso, clique no texto correspondente ao idioma desejado (por exemplo, Português) e selecione sua preferência. A página será traduzida automaticamente para o idioma escolhido.
+The site's first functionality allows you to choose the language displayed, with options in _English_, _Spanish_ and _Portuguese_.
+To do this, click on the text corresponding to the desired language (for example, Portuguese) and select your preference. The page will be automatically translated into the chosen language.
 
-Veja o exemplo abaixo:
+See the example below:
 
 ![Selecionando o idioma do site](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/2.Language.gif)
 
-- **Visualizando um Arquivo JSON**:
+- **Viewing a JSON File**:
 
-Na aplicação, você pode selecionar um arquivo JSON e visualizar seu conteúdo na tela.
-Para fazer isso, clique no texto Insira o arquivo JSON aqui, o que abrirá as pastas do seu dispositivo.
-Basta selecionar o arquivo JSON que deseja visualizar.
+In the application, you can select a JSON file and view its contents on the screen.
+To do this, click on the text Insert JSON file here, which will open the folders on your device.
+Just select the JSON file you want to view.
 
-- **Limpando o Conteúdo**:
+- **Cleaning the Content**:
 
-Após visualizar o conteúdo do arquivo, o botão Limpar conteúdo será ativado. Clicando nele, você limpa o conteúdo da tela.
+After viewing the file contents, the Clear Contents button will be activated. By clicking on it, you clear the contents of the screen.
 
-Veja o exemplo abaixo:
+See the example below:
 
 ![Visualizando o conteúdo de um arquivo JSON](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/3.View.gif)
 
-- **Arquivo JSON Inválido**:
+- **Invalid JSON File**:
 
-Se você selecionar um arquivo inválido, receberá uma mensagem de erro indicando o problema, como mostrado abaixo:
+If you select an invalid file, you will receive an error message indicating the problem, as shown below:
 
 ![Arquivo JSON inválido](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/4.Error.gif)
 
-- **Carregamento de Arquivo Grande**:
+- **Large File Upload**:
 
-Quando você seleciona um arquivo grande, um componente visual aparece na tela, indicando que o conteúdo está sendo carregado. Isso permite uma experiência tranquila durante o carregamento do arquivo, como ilustrado abaixo:
+When you select a large file, a visual component appears on the screen, indicating that the content is being loaded. This allows for a smooth experience while uploading the file, as illustrated below:
 
 ![Loading do arquivo JSON](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/5.Loading.gif)
 
-Esses passos simples garantem uma navegação eficaz na aplicação, permitindo que você aproveite ao máximo seus recursos.
+These simple steps ensure efficient navigation in the application, allowing you to make the most of its features.
 
-<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
+<p align="right"><a href="#top">Back to the top ☝</a></p>
 
 ---
 
-<h2>Tecnologias utilizadas 🛠</h2>
+<h2>Technologies used 🛠</h2>
 
 <br>
 
 <img title="React" alt="React" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /> <img title="CSS" alt="CSS" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />  <img title="HTML" alt="HTML" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /> <img title="JavaScript" alt="JavaScript" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
           
-<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
+<p align="right"><a href="#top">Back to the top ☝</a></p>
 
 ---
 
-<h2>Executar o projeto 💻</h2>
+<h2>Execute the project 💻</h2>
 
 <br>
 
-<details><summary>Aplicação React 🎉</summary>
+<details><summary>React Application 🎉</summary>
 
-Para clonar o projeto, instalar as dependências e iniciar a aplicação `React`, execute os comandos na ordem a seguir:
+To clone the project, install the dependencies and start the `React` application, run the commands in the following order:
 
 ```bash
   git clone https://github.com/Kecbm/rinha-de-frontend.git
@@ -213,9 +213,9 @@ Para clonar o projeto, instalar as dependências e iniciar a aplicação `React`
 
 </details>
 
-<details><summary>Testes 🧪</summary>
+<details><summary>Tests 🧪</summary>
 
-Para rodar os testes do projeto, execute os comandos na ordem a seguir:
+To run the project tests, execute the commands in the following order:
 
 ```bash
   git clone https://github.com/Kecbm/rinha-de-frontend.git
@@ -237,7 +237,7 @@ Para rodar os testes do projeto, execute os comandos na ordem a seguir:
 
 </details>
 
-<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
+<p align="right"><a href="#top">Back to the top ☝</a></p>
 
 ---
 
@@ -247,36 +247,36 @@ Para rodar os testes do projeto, execute os comandos na ordem a seguir:
 
 <details><summary>ESlint 👔</summary>
 
-Durante o processo de desenvolvimento, encontrei um desafio com a inicialização do ESlint na aplicação, que resultou no seguinte erro:
+During the development process, I encountered a challenge with initializing ESlint in the application, which resulted in the following error:
 
 ![Erro na inicialização do ESlint](https://github.com/Kecbm/rinhadefrontend/blob/main/src/assets/1.EsLint.png)
 
-Apesar de ter realizado diversas tentativas de resolução, não obtive sucesso em solucionar esse problema 🙁
+Despite having made several attempts at resolution, I was unsuccessful in resolving this problem 🙁
 
 </details>
 
-<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
+<p align="right"><a href="#top">Back to the top ☝</a></p>
 
 ---
 
-<h2>Próximos passos 📝</h2>
+<h2>Next steps 📝</h2>
 
-Visando oferecer um Software de melhoria continua, considerando o ciclo do desenvolvimento MVP (Produto Mínimo Viável) onde é realizada a análise do retorno dos clientes a cada nova entrega e ajustes nas funcionalidades existentes ou desenvolvimentos de novas funcionalidades, a seguir listo uma série de etapas futuras a serem realizadas no projeto, o que forma um backlog do produto. Sinta-se a vontade para contribuir com essa lista.
-
-<br>
-
-- [ ] Escrever mais casos de testes para a aplicação;
-- [ ] Desenvolvimento de uma estrutura de select de idiomas personalizada;
-- [ ] Adição de novas propriedades de acessibilidade;
-- [ ] Responsividades para dispositivos com telas pequenas e médias;
-- [ ] Transformar a home em uma página da aplicação;
-- [ ] Adicionar mais informações ao footer;
-- [ ] Desenvolver estilização para página Not Found;
+Aiming to offer continuous improvement Software, considering the MVP (Minimum Viable Product) development cycle where customer feedback is analyzed with each new delivery and adjustments to existing features or development of new features, below I list a series of steps future tasks to be carried out in the project, which forms a product backlog. Feel free to contribute to this list.
 
 <br>
 
-<p align="right"><a href="#top">Voltar ao topo ☝</a></p>
+- [ ] Write more test cases for the application;
+- [ ] Development of a customized language select structure;
+- [ ] Addition of new accessibility properties;
+- [ ] Responsiveness for devices with small and medium screens;
+- [ ] Transform the home page into an application page;
+- [ ] Add more information to the footer;
+- [ ] Develop styling for Not Found page;
+
+<br>
+
+<p align="right"><a href="#top">Back to the top ☝</a></p>
 
 ---
 
-<p align="center">Projeto desenvolvido por <a href="https://www.linkedin.com/in/kecbm/" target="_blank" rel="noopener noreferrer">Klecianny Melo</a> 😁</p>
+<p align="center">Project developed by <a href="https://www.linkedin.com/in/kecbm/" target="_blank" rel="noopener noreferrer">Klecianny Melo</a> 😁</p>
